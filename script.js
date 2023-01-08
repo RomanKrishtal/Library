@@ -40,3 +40,5 @@ function renderBooks() {
 }
 
 renderBooks();
+
+// New Book toggle appear / disappear
