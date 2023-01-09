@@ -42,9 +42,27 @@ function renderBooks() {
 renderBooks();
 
 // New Book toggle appear / disappear
-let button = document.querySelector('.btn');
-let popup = document.querySelector('.popup');
+const button = document.querySelector('.btn');
+const popup = document.querySelector('.popup');
 
 button.addEventListener('click', function() {
     popup.classList.toggle('popup-visible');
+})
+
+// Form Submit
+const form = document.getElementById('form');
+const submitButton = document.getElementById('submit');
+const inputName = document.getElementById('bookName');
+const inputAuthor = document.getElementById('bookAuthor');
+const inputPage = document.getElementById('bookPages');
+
+submitButton.addEventListener('click', function(index) {
+    const bookItem = document.createElement('div');
+    bookItem.setAttribute('id', index);
+    bookItem.setAttribute('key', index);
+    bookItem.appendChild(createBookElement('h1', `Title: ${inputName.value}`));
+    bookItem.appendChild(createBookElement('h1', `Author: ${inputAuthor.value}`));
+    bookItem.appendChild(createBookElement('h1', `Pages: ${inputPage.value}`));
+    bookItem.appendChild(createBookElement('h1', `Read: ${bookStatus.value}`));
+    books.appendChild(bookItem);
 })

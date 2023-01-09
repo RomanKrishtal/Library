@@ -11,7 +11,7 @@
             </div>
             <!-- form for New Book -->
             <div class="popup">
-                <form action="post">
+                <form action="post" id="form">
                     <div>
                         <label for="bookName">Book's Name:</label>
                         <input type="text" id="bookName">
@@ -22,9 +22,19 @@
                     </div>
                     <div>
                         <label for="bookPages">Book's Pages:</label>
-                        <input type="text" id="bookPages">
+                        <input type="number" id="bookPages">
+                    </div>
+                    <div>
+                        <label for="bookStatus">Book Read:</label>
+                        <select name="boolean" id="bookStatus">
+                            <option value="true">True</option>
+                            <option value="false">False</option>
+                        </select>
                     </div>
                 </form>
+            </div>
+            <div class="btn">
+                <button type="submit" id="submit">Submit Book</button>
             </div>
         </header>
         <main class="content">
