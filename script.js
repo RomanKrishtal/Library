@@ -49,7 +49,7 @@ button.addEventListener('click', function() {
     popup.classList.toggle('popup-visible');
 })
 
-// Form Submit with button!!!
+// Form Submit with button
 const form = document.getElementById('form');
 const submitButton = document.getElementById('submit');
 const inputName = document.getElementById('bookName');
