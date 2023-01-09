@@ -9,3 +9,10 @@ body {
 }
 
 /* Styles for New Book */
+.popup {
+    visibility: hidden;
+}
+
+.popup-visible {
+    visibility: visible;
+}

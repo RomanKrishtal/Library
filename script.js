@@ -42,3 +42,9 @@ function renderBooks() {
 renderBooks();
 
 // New Book toggle appear / disappear
+let button = document.querySelector('.btn');
+let popup = document.querySelector('.popup');
+
+button.addEventListener('click', function() {
+    popup.classList.toggle('popup-visible');
+})
