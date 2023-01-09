@@ -49,7 +49,7 @@ button.addEventListener('click', function() {
     popup.classList.toggle('popup-visible');
 })
 
-// Form Submit
+// Form Submit with button
 const form = document.getElementById('form');
 const submitButton = document.getElementById('submit');
 const inputName = document.getElementById('bookName');
@@ -66,3 +66,5 @@ submitButton.addEventListener('click', function(index) {
     bookItem.appendChild(createBookElement('h1', `Read: ${bookStatus.value}`));
     books.appendChild(bookItem);
 })
+
+// Form submit with input
