@@ -85,6 +85,10 @@ submitInput.addEventListener('click', function(event) {
     author.textContent = `Author: ${inputAuthor.value}`;
     page.textContent = `Pages ${inputPage.value}`;
     readStatus.textContent = `Read: ${bookStatus.value}`;
+    const deleteBook = document.createElement('button');
+    deleteBook.setAttribute('class', 'delete');
+    deleteBook.textContent = 'Delete';
+    deleteBook.setAttribute('data-book-delete', myLibrary.length);
     bookItem.appendChild(name);
     bookItem.appendChild(author);
     bookItem.appendChild(page);
@@ -92,15 +96,11 @@ submitInput.addEventListener('click', function(event) {
     bookItem.appendChild(deleteBook);
     bookItem.setAttribute('data-book', myLibrary.length);
     books.appendChild(bookItem);
-    console.log(bookItem);
+    deleteBook.addEventListener('click', function() {
+        if (bookItem.dataset.book === deleteBook.dataset.bookDelete) {
+            myLibrary.splice(bookItem.dataset.book - 1 , 1);
+            bookItem.remove();
+        }
+    })
     event.preventDefault();
-})
-
-// DeleteButton
-const deleteBook = document.createElement('button');
-deleteBook.setAttribute('class', 'delete');
-deleteBook.textContent = 'Delete';
-
-deleteBook.addEventListener('click', function() {
-    
 })
