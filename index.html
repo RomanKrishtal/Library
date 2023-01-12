@@ -2,6 +2,9 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -10,7 +13,7 @@
                 <button class="btn">Add New Book</button>
             </div>
             <!-- form for New Book -->
-            <div class="popup">
+            <div class="popup popup-visible">
                 <form action="post" id="form">
                     <div>
                         <label for="bookName">Book's Name:</label>
@@ -34,9 +37,9 @@
                     <input type="submit" id="submitInput">
                 </form>
             </div>
-            <div class="btn">
+            <!-- <div class="btn"> -->
                 <!-- <button type="submit" id="submit">Submit Book</button> -->
-            </div>
+            <!-- </div> -->
         </header>
         <main class="content">
             <h1>Books</h1>

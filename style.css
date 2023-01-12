@@ -1,12 +1,34 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .books {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+    border: 1px solid black;
+    border-style: dashed;
+}
+
+.card {
+    /* border: 1px solid black; */
 }
 
 /* Styles for New Book */
 .popup {
     visibility: hidden;
+    border: 1px solid black;
+}
+
+.popup form {
+    display: flex;
+    background-color: lightcoral;
+    padding: 5px;
+}
+
+form input {
+    border-radius: 30px;
+    cursor: pointer;
 }
 
 .popup-visible {

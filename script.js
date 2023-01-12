@@ -77,6 +77,7 @@ submitInput.addEventListener('click', function(event) {
     pages: inputPage.value,
     read: bookStatus.value});
     const bookItem = document.createElement('div');
+    bookItem.classList.add('class', 'card');
     let name = document.createElement('h1');
     let author = document.createElement('h1');
     let page = document.createElement('h1');
