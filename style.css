@@ -10,9 +10,9 @@ body {
     border-style: dashed;
 }
 
-.card {
-    /* border: 1px solid black; */
-}
+/* .card {
+    
+} */
 
 /* Styles for New Book */
 .popup {
@@ -22,7 +22,7 @@ body {
 
 .popup form {
     display: flex;
-    background-color: lightcoral;
+    background-color: #ADD8E6;
     padding: 5px;
 }
 
@@ -33,4 +33,21 @@ form input {
 
 .popup-visible {
     visibility: visible;
+}
+
+input[type=submit] {
+    border: none;
+    box-shadow: 5px 5px 3px 0px #01b8f5,
+    -5px -5px 3px 0 #01b8f5,
+    5px -5px 3px 0 #01b8f5,
+    -5px 5px 3px 0 #01b8f5;
+    font-weight: bold;
+}
+
+input[type=submit]:active {
+    box-shadow: none;
+}
+
+.content > h1 {
+    border: 1px solid;
 }

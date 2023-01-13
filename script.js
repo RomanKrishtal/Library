@@ -1,18 +1,21 @@
 const books = document.querySelector('.books');
 
-let myLibrary = [{
-    title: "Book1",
-    author: "A",
-    pages: "300",
-    read: true
-},
-{
-    title: "Book2",
-    author: "B",
-    pages: "400",
-    read: true
-}
-];
+// let myLibrary = [{
+//     title: "Book1",
+//     author: "A",
+//     pages: "300",
+//     read: true
+// },
+// {
+//     title: "Book2",
+//     author: "B",
+//     pages: "400",
+//     read: true
+// }
+// ];
+
+let myLibrary = [];
+
 
 function createBookElement(el, content, className) {
     const element = document.createElement(el);
@@ -36,6 +39,19 @@ function createBookItem(book, index) {
 function renderBooks() {
     myLibrary.map((book, index) => {
         createBookItem(book, index)
+    })
+}
+
+function addCheckBooks() {
+    myLibrary.map(book => {
+        const checkBoxInputYes = document.createElement('input');
+        const boxLabelYes = document.createElement('label');
+        boxLabelYes.textContent = 'yes';
+        const checkBoxInputNo = document.createElement('input');
+        const boxLabelNo = document.createElement('label');
+        boxLabelNo.textContent = 'no';
+        checkBoxInputYes.setAttribute('type', 'checkbox');
+        checkBoxInputNo.setAttribute('type', 'checkbox');
     })
 }
 
@@ -76,7 +92,19 @@ submitInput.addEventListener('click', function(event) {
     author: inputAuthor.value,
     pages: inputPage.value,
     read: bookStatus.value});
+
     const bookItem = document.createElement('div');
+
+
+    const checkBoxInputYes = document.createElement('input');
+    const boxLabelYes = document.createElement('label');
+    boxLabelYes.textContent = 'yes';
+    const checkBoxInputNo = document.createElement('input');
+    const boxLabelNo = document.createElement('label');
+    boxLabelNo.textContent = 'no';
+    checkBoxInputYes.setAttribute('type', 'checkbox');
+    checkBoxInputNo.setAttribute('type', 'checkbox');
+
     bookItem.classList.add('class', 'card');
     let name = document.createElement('h1');
     let author = document.createElement('h1');
@@ -85,7 +113,11 @@ submitInput.addEventListener('click', function(event) {
     name.textContent = `Title: ${inputName.value}`;
     author.textContent = `Author: ${inputAuthor.value}`;
     page.textContent = `Pages ${inputPage.value}`;
-    readStatus.textContent = `Read: ${bookStatus.value}`;
+    readStatus.textContent = `Read: `;
+    readStatus.appendChild(checkBoxInputYes);
+    readStatus.appendChild(boxLabelYes);
+    readStatus.appendChild(checkBoxInputNo);
+    readStatus.appendChild(boxLabelNo);
     const deleteBook = document.createElement('button');
     deleteBook.setAttribute('class', 'delete');
     deleteBook.textContent = 'Delete';
