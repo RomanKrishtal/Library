@@ -104,6 +104,14 @@ submitInput.addEventListener('click', function(event) {
     boxLabelNo.textContent = 'no';
     checkBoxInputYes.setAttribute('type', 'checkbox');
     checkBoxInputNo.setAttribute('type', 'checkbox');
+    let optionYes = document.getElementById('optionYes');
+    let optionNo = document.getElementById('optionNo');
+    if (optionYes.getAttribute('value') === 'yes') {
+        checkBoxInputYes.checked = true;
+    } 
+    if (optionNo.getAttribute('value') === 'no'){
+        checkBoxInputNo.checked = true;
+    }
 
     bookItem.classList.add('class', 'card');
     let name = document.createElement('h1');
