@@ -85,6 +85,7 @@ const inputPage = document.getElementById('bookPages');
 
 // Form submit with input
 const submitInput = document.getElementById('submitInput');
+const select = document.getElementById('bookStatus');
 
 submitInput.addEventListener('click', function(event) {
     myLibrary.push(
@@ -106,10 +107,10 @@ submitInput.addEventListener('click', function(event) {
     checkBoxInputNo.setAttribute('type', 'checkbox');
     let optionYes = document.getElementById('optionYes');
     let optionNo = document.getElementById('optionNo');
-    if (optionYes.getAttribute('value') === 'yes') {
+    if (select.value === 'yes') {
         checkBoxInputYes.checked = true;
     } 
-    if (optionNo.getAttribute('value') === 'no'){
+    if (select.value === 'no'){
         checkBoxInputNo.checked = true;
     }
 
