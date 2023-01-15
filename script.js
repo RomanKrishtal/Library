@@ -63,6 +63,7 @@ const popup = document.querySelector('.popup');
 
 button.addEventListener('click', function() {
     popup.classList.toggle('popup-visible');
+    document.querySelector('.content').classList.toggle('marginMove');
 })
 
 // Form Submit with button1
