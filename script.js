@@ -89,6 +89,7 @@ const submitInput = document.getElementById('submitInput');
 const select = document.getElementById('bookStatus');
 
 submitInput.addEventListener('click', function(event) {
+    // Array push
     myLibrary.push(
     {title: inputName.value, 
     author: inputAuthor.value,
@@ -96,14 +97,14 @@ submitInput.addEventListener('click', function(event) {
     read: bookStatus.value});
 
     const bookItem = document.createElement('div');
-
-
+    // Checkbox added
     const checkBoxInputYes = document.createElement('input');
     const boxLabelYes = document.createElement('label');
     boxLabelYes.textContent = 'yes';
     const checkBoxInputNo = document.createElement('input');
     const boxLabelNo = document.createElement('label');
     boxLabelNo.textContent = 'no';
+    // Checkbox added
     checkBoxInputYes.setAttribute('type', 'checkbox');
     checkBoxInputNo.setAttribute('type', 'checkbox');
     if (select.value === 'yes') {
@@ -118,6 +119,8 @@ submitInput.addEventListener('click', function(event) {
     let author = document.createElement('h1');
     let page = document.createElement('h1');
     let readStatus = document.createElement('h1');
+
+    // H1 appending
     name.textContent = `Title: ${inputName.value}`;
     author.textContent = `Author: ${inputAuthor.value}`;
     page.textContent = `Pages ${inputPage.value}`;
@@ -126,6 +129,8 @@ submitInput.addEventListener('click', function(event) {
     readStatus.appendChild(boxLabelYes);
     readStatus.appendChild(checkBoxInputNo);
     readStatus.appendChild(boxLabelNo);
+
+    // delete Book button added
     const deleteBook = document.createElement('button');
     deleteBook.setAttribute('class', 'delete');
     deleteBook.textContent = 'Delete';
